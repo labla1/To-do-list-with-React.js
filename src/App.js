@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Form from "./Form";
+import Tasks from "./Tasks";
+import Innerbuttons from "./InnerButtons";
+
+const tasks = [
+  {id: 1, content: "aaa", done: true},
+  {id: 2, content: "bbb", done: false},
+];
+
+const allTasksHidden = false;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="main">
+      <h1 className="main__header">To-Do List</h1>
+      <section className="section">
+        <h2 className="section__header">Add new task</h2>
+        <Form />
+        </section>
+        <section className="section">
+          <div className="section__top">
+            <h2 className="section__header">Task List</h2>
+            <Innerbuttons tasks = {tasks} allTasksHidden = {allTasksHidden}/>
+          </div>
+          <Tasks tasks={tasks} allTasksHidden={allTasksHidden} />
+        </section>
+    </main>
   );
 }
 

@@ -1,0 +1,59 @@
+.taskContainer {
+    border-top: 2px solid #eee;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.addedTaskText {
+    padding: 5px;
+}
+
+.taskContainer__checkButton {
+    background-color: hsl(120, 95%, 30%);
+    width: 35px;
+    height: 30px;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.taskContainer__checkButton:hover {
+    background-color: hsl(120, 95%, 35%);
+    transform: scale(1.1);
+}
+
+.taskContainer__checkButton:active {
+    background-color: hsl(120, 95%, 40%);
+}
+
+.taskContainer__removeButton {
+    background-color: hsl(0, 100%, 50%);
+    width: 35px;
+    height: 30px;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.taskContainer__removeButton:hover {
+    background-color: hsl(0, 100%, 40%);
+    transform: scale(1.1);
+}
+
+.taskContainer__removeButton:active {
+    background-color: hsl(0, 100%, 30%);
+}
+
+.taskContainer__checkButton--lineThrough {
+    text-decoration: line-through;
+}
+
+.task--hidden {
+    display: none;
+}
