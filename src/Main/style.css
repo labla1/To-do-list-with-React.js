@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 750px;
+    max-width: 100%;
+    margin: 100px auto;
+    background-color: #eeeeee;
+}
+
+.main {
+    margin: 0 15px 0 15px;
+}
+
+.main__header {
+    padding: 5px;
+}

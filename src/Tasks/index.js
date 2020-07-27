@@ -1,18 +1,18 @@
 import React from "react";
 import "./style.css";
 
-const Tasks = (props) => (
+const Tasks = ({tasks, allTasksHidden}) => (
     <div>
-        {props.tasks.map(task => (
-            <div className={`taskContainer ${task.done && props.allTasksHidden ? "task--hidden" : ""}`}>
-                 <button className="taskContainer__checkButton">
-            {task.done ? "✔" : ""}
-            </button>
+        {tasks.map(task => (
+            <div className={`taskContainer ${task.done && allTasksHidden ? "task--hidden" : ""}`}>
+                <button className="taskContainer__checkButton">
+                    {task.done ? "✔" : ""}
+                </button>
                 <span className={`addedTaskText ${task.done ? "taskContainer__checkButton--lineThrough" : ""}`}>
-                {task.content}
+                    {task.content}
                 </span>
                 <button className="taskContainer__removeButton">
-                &#10006;
+                    &#10006;
                 </button>
             </div>
         ))}
